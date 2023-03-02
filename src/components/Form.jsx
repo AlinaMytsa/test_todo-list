@@ -27,7 +27,7 @@ const Form = ({addTask}) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (title.titleValue.trim() === '0' || description.deskValue.trim() === ''){
+    if (title.titleValue.trim() === '' || description.deskValue.trim() === ''){
       throw new Error('This field is empty.')
     }else {
       addTask(title.titleValue, description.deskValue);
